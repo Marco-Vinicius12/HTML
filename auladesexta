@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boas-Vindas</title>
+    <link rel="shortcut icon" href="https://th.bing.com/th/id/OIP.Id1xzwjc5c4hNqiKLVf5QwHaFj?rs=1&pid=ImgDetMain" type="image/x-icon">
+    <script> 
+        function MostrarMensagem() {
+            let nome = document.getElementById("nome").value;
+            document.getElementById("mensagem").innerText = "Bem-vindo, " + nome + "!";
+            let telefone = document.getElementById("telefone").value;
+            document.getElementById("telefoneInfo").innerText = "Telefone Informado: " + telefone + "!";
+            let email = document.getElementById("email").value;
+            document.getElementById("emailInfo").innerText = "Email informado:" + email + ".";
+
+        }
+    </script>
+    <style>
+        h2{
+            border: none;
+            border-radius: 10px;
+            transition: backgraund 0.3s ease;
+            
+        }
+        input{
+            background-color: rgb(172, 202, 18);
+            border-radius: 18px;
+            font-size: 16px;
+        }
+        button{
+            background-color: rgb(23, 192, 51);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: backgraund 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <h2>Nome</h2>
+    <input type="text" id="nome">
+    <h3 id="mensagem"></h3>
+    
+    <h2>Celular</h2>
+    <input type="tel" id="telefone">
+    <h3 id="telefoneInfo"></h3>
+
+    <h2>Email</h2>
+    <input type="email" id="email">
+    <h3 id="emailInfo"></h3>
+    <button onclick="MostrarMensagem()">Enviar</button>
+</center>
+</body>
+</html>
